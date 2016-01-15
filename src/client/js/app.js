@@ -60,12 +60,8 @@ function validNick() {
 window.onload = function() {
 
     var btn = document.getElementById('startButton'),
-        btnS = document.getElementById('spectateButton'),
         nickErrorText = document.querySelector('#startMenu .input-error');
 
-    btnS.onclick = function () {
-        startGame('spectate');
-    };
     btn.onclick = function () {
 
         // Checks if the nick is valid.
