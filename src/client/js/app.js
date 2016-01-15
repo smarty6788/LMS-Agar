@@ -51,11 +51,11 @@ function startGame(type) {
 }
 
 // Checks if the nick chosen contains valid alphanumeric characters (and underscores).
-function validNick() {
-    var regex = /^\w*$/;
-    debug('Regex Test', regex.exec(playerNameInput.value));
-    return regex.exec(playerNameInput.value) !== null;
-}
+//function validNick() {
+//    var regex = /^\w*$/;
+//    debug('Regex Test', regex.exec(playerNameInput.value));
+//    return regex.exec(playerNameInput.value) !== null;
+//}
 
 window.onload = function() {
 
@@ -65,12 +65,12 @@ window.onload = function() {
     btn.onclick = function () {
 
         // Checks if the nick is valid.
-        if (validNick()) {
-            nickErrorText.style.opacity = 0;
+        //if (validNick()) {
+        //    nickErrorText.style.opacity = 0;
             startGame('player');
-        } else {
-            nickErrorText.style.opacity = 1;
-        }
+        //} else {
+        //    nickErrorText.style.opacity = 1;
+        //}
     };
 
     var settingsMenu = document.getElementById('settingsButton');
@@ -89,12 +89,12 @@ window.onload = function() {
         var key = e.which || e.keyCode;
 
         if (key === KEY_ENTER) {
-            if (validNick()) {
-                nickErrorText.style.opacity = 0;
+            //if (validNick()) {
+            //    nickErrorText.style.opacity = 0;
                 startGame('player');
-            } else {
-                nickErrorText.style.opacity = 1;
-            }
+            //} else {
+            //    nickErrorText.style.opacity = 1;
+            //}
         }
     });
 };
