@@ -497,6 +497,10 @@ chat.registerCommand('kick', 'Kick a player, for admins only.', function (args) 
     socket.emit('kick', args);
 });
 
+chat.registerCommand('addmass', 'Add mass, for admins only.', function (args) {
+    socket.emit('addmass', args);
+});
+
 
 // socket stuff.
 function setupSocket(socket) {
