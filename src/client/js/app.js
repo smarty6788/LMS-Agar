@@ -119,7 +119,7 @@ var died = false;
 var kicked = false;
 
 // TODO: Break out into GameControls.
-var continuity = false;
+var continuity = true;
 var startPingTime = 0;
 var toggleMassState = 1;
 var backgroundColor = '#f2fbff';
