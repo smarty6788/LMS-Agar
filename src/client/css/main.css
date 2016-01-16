@@ -131,7 +131,7 @@ div {
     padding: 0;
     text-align: center;
     font-size: x-large;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 #playerNameInput {
