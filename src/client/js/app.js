@@ -19,7 +19,7 @@ var animLoopHandle;
 var spin = -Math.PI;
 var enemySpin = -Math.PI;
 var mobile = false;
-var foodSides = 1;
+var foodSides = 5;
 var virusSides = 0;
 
 if(window.location.host.split('.')[0] == 'agar5'){
