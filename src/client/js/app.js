@@ -121,7 +121,7 @@ var kicked = false;
 // TODO: Break out into GameControls.
 var continuity = false;
 var startPingTime = 0;
-var toggleMassState = 0;
+var toggleMassState = 1;
 var backgroundColor = '#f2fbff';
 var lineColor = '#000000';
 
@@ -404,8 +404,8 @@ function vertical(key) {
 }
 function checkLatency() {
     // Ping.
-    startPingTime = Date.now();
-    socket.emit('ping');
+    //startPingTime = Date.now();
+    //socket.emit('ping');
 }
 
 function toggleDarkMode() {
