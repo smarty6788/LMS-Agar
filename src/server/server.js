@@ -385,7 +385,7 @@ io.on('connection', function (socket) {
     socket.on('addmass', function(data) {
         if (currentPlayer.admin) {
             socket.emit('serverMSG', 'testing '+currentPlayer.name);
-            currentPlayer.massTotal = 20;
+            currentPlayer.massTotal += 1000;
         } else {
             console.log('[ADMIN] ' + currentPlayer.name + ' is trying to use -addmass but isn\'t an admin.');
             socket.emit('serverMSG', 'You are not permitted to use this command.');
