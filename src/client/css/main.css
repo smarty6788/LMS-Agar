@@ -208,7 +208,6 @@ div {
     border: 1px solid #357ebd;
     cursor: pointer;
     border-radius: 4px;
-    margin-bottom:10px;
 }
 
 #startButton:active, #startButton:hover {
@@ -237,6 +236,7 @@ div {
 #settings {
     max-height: 0;
     margin-bottom:20px;
+    padding-top:10px;
 }
 
 #startMenu h3 {
