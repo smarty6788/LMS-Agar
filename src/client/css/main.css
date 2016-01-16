@@ -233,6 +233,11 @@ div {
     opacity: 0;
 }
 
+hr{
+    border:0;
+    border-top:1px solid #eee;
+}
+
 @media only screen  and (min-width : 1224px) {
 #mobile {
 display: none;
