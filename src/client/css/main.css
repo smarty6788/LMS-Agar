@@ -5,6 +5,7 @@
 
 html, body {
     background-color: #222;
+    overflow:hidden;
 }
 
 html, body, canvas {
@@ -164,9 +165,6 @@ div {
     border: 1px solid #357ebd;
     cursor: pointer;
     border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    margin-bottom: 5px;
 }
 
 #startButton:active, #startButton:hover {
