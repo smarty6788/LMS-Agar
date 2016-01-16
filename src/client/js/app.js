@@ -19,8 +19,14 @@ var animLoopHandle;
 var spin = -Math.PI;
 var enemySpin = -Math.PI;
 var mobile = false;
-var foodSides = 4;
+var foodSides = 0;
 var virusSides = 0;
+
+if(window.location.host.split('.')[0] == 'agar5'){
+    document.getElementById("gamemode").selectedIndex = 0;
+} else {
+    document.getElementById("gamemode").selectedIndex = 1;
+}
 
 var debug = function(args) {
     if (console && console.log) {
