@@ -153,6 +153,7 @@ div {
     height:34px;
     line-height:1.42857143;
     color: #555;
+    box-sizing:border-box;
 }
 
 #playerNameInput:focus, #playerNameInput.focus {
