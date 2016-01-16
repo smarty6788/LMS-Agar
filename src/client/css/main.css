@@ -78,6 +78,12 @@ div {
     pointer-events: none;
 }
 
+#instructions ul{
+    padding: 5px;
+    margin: 0;
+    list-style: none;
+}
+
 .chatbox .chat-list {
     padding: 5px;
     margin: 0;
