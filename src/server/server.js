@@ -380,6 +380,14 @@ io.on('connection', function (socket) {
             console.log('[ADMIN] ' + currentPlayer.name + ' is trying to use -kick but isn\'t an admin.');
             socket.emit('serverMSG', 'You are not permitted to use this command.');
         }
+        
+    socket.on('addmass', function(data) {
+        if (currentPlayer.admin) {
+            socket.emit('serverMSG', 'testing '+currentPlayer.name);
+        } else {
+            console.log('[ADMIN] ' + currentPlayer.name + ' is trying to use -addmass but isn\'t an admin.');
+            socket.emit('serverMSG', 'You are not permitted to use this command.');
+        }
     });
 
     // Heartbeat function, update everytime.
