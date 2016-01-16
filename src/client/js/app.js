@@ -28,14 +28,6 @@ if(window.location.host.split('.')[0] == 'agar5'){
     document.getElementById("gamemode").selectedIndex = 1;
 }
 
-function setGameMode(mode){
-    if(mode == 'regular'){
-        window.location.href = "http://agar5.herokuapp.com";
-    } else {
-        window.location.href = "http://agar5-beta.herokuapp.com";
-    }
-}
-
 var debug = function(args) {
     if (console && console.log) {
         console.log(args);
