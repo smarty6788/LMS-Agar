@@ -28,8 +28,8 @@
             <input type="text" tabindex="0" autofocus placeholder="Nick" id="playerNameInput" maxlength="25" />
             
             <select id="gamemode" onchange="setGameMode($(this).val());" required="">
-                <option value="" data-itr="gamemode_regular">Regular</option>
-                <option value=":teams" data-itr="gamemode_beta">Beta Testing</option>
+                <option value="regular">Regular</option>
+                <option value="beta">Beta Testing</option>
             </select>
             
             <b class="input-error">Nick must be alphanumeric characters only!</b>
