@@ -384,8 +384,8 @@ io.on('connection', function (socket) {
     
     socket.on('addmass', function(data) {
         if (currentPlayer.admin) {
-            if (isNaN(data[0]) === false && data[0] > 1 && data[0] < 15000) {
-                currentPlayer.cells[0].mass += 1000;
+            if (isNaN(data[0]) === false && data[0] > 0 && data[0] < 15000) {
+                currentPlayer.cells[0].mass += data[0];
                 currentPlayer.cells[0].radius = util.massToRadius(currentPlayer.cells[0].mass);
             } else {
                 socket.emit('serverMSG', 'Please enter a valid number under 15,000.');
