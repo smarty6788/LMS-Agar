@@ -48,7 +48,7 @@
                 <ul>
                     <li>Share <b>agar5</b> and spawn at <b>250 mass</b>!</li>
                     <li><button id="sharebtn" onclick="doshare();" style="margin-top:5px;margin-bottom:5px">Share</button>
-                    <div id="shareicns" style="display:none;">Share: <a href="mailto:?subject=Check out this fun game I found!&amp;body=Here's the link: https://agar5.herokuapp.com" target="_blank">Email</a>, <a href="">Facebook</a>, <a href="">Twitter</a>, <a href="">Link</a></div></li>
+                    <div id="shareicns" style="display:none;">Share: <a id="s_email" href="" target="_blank">Email</a> - <a id="s_fb" href="">Facebook</a> - <a id="s_tw" href="">Twitter</a></div></li>
                     <li><small style="font-size:9px !important">user id: <span id="userid" style="font-size:9px !important"></span></small></li>
                 </ul>
                 <hr>
@@ -96,6 +96,11 @@
     function doshare(){
         alert('IMPORTANT: Please read before sharing! In order to get the 250 mass offer, someone who has NEVER player agar5 before needs to click on the link. If they have played agar5 before, it will not count towards the bonus. The 250 mass bonus will only work on \'Regular\' gamemode.');
         $('#sharebtn').fadeOut();
+        
+        $('#s_email').attr("href","mailto:?subject=Check out this fun game I found!&amp;body=Here's the link: https://agar5.herokuapp.com#"+getCookie('uid'));
+        $('#s_fb').attr("href","https://www.facebook.com/sharer/sharer.php?u=https%3A//agar5.herokuapp.com#"+getCookie('uid'));
+        $('#s_tw').attr("href","https://twitter.com/home?status=Challenge%20me%20to%20this%20fun%20online%20game%20I%20found!%20https%3A//agar5.herokuapp.com#"+getCookie('uid'));
+        
         $('#shareicns').fadeIn();
     }
     </script>
