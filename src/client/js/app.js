@@ -533,7 +533,7 @@ function setupSocket(socket) {
     });
 
     socket.on('playerDied', function (data) {
-        chat.addSystemLine('{GAME} - <b>' + (data.name.length < 1 ? 'An unnamed cell' : data.name) + '</b> was eaten.');
+        chat.addSystemLine('{GAME} - RIP: <b>' + (data.name.length < 1 ? 'An unnamed cell' : data.name) + '</b>.');
     });
 
     socket.on('playerDisconnect', function (data) {
@@ -561,7 +561,7 @@ function setupSocket(socket) {
                     status += (i + 1) + '. An unnamed cell';
             }
         }
-        //status += '<br />Players: ' + data.players;
+        status += '<br />Players: ' + data.players;
         document.getElementById('status').innerHTML = status;
     });
 
