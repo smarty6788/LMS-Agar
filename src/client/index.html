@@ -49,30 +49,6 @@
                     <li>Enjoy agar5? <b>Share</b> it with your friends!</li>
                     <br/>
                     <li><small style="font-size:9px !important">user id: <span id="userid"></span></small></li>
-                    
-                    <script>
-                    function getCookie(cname) {
-                        var name = cname + "=";
-                        var ca = document.cookie.split(';');
-                        for(var i=0; i<ca.length; i++) {
-                            var c = ca[i];
-                            while (c.charAt(0)==' ') c = c.substring(1);
-                            if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
-                        }
-                        return "";
-                    }
-                    
-                    if(window.location.host.split('.')[0] == 'agar5-beta'){
-                        if (document.cookie.indexOf('uid') >= 0) {
-                            $('#userid').text(getCookie('uid'));
-                        }
-                        else {
-                            var rand = Math.floor((Math.random() * 99999) + 10000);
-                            document.cookie = "uid=u"+rand+"; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-                            $('#userid').text(getCookie('uid'));
-                        }
-                    }
-                    </script>
                 </ul>
                 <hr>
                 <small style="font-size:11px !important">Advertisement</small>
@@ -93,6 +69,29 @@
     </div>
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1);
+            if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+        }
+        return "";
+    }
+    
+    if(window.location.host.split('.')[0] == 'agar5-beta'){
+        if (document.cookie.indexOf('uid') >= 0) {
+            $('#userid').text(getCookie('uid'));
+        }
+        else {
+            var rand = Math.floor((Math.random() * 99999) + 10000);
+            document.cookie = "uid=u"+rand+"; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+            $('#userid').text(getCookie('uid'));
+        }
+    }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script src="js/app.js"></script>
 </body>
