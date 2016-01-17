@@ -49,6 +49,17 @@
                     <li>Enjoy agar5? <b>Share</b> it with your friends!</li>
                     <br/>
                     <li><small style="font-size:9px !important">user id: <span id="userid"></span></small></li>
+                    
+                    <script>
+                        if (document.cookie.indexOf("uid") >= 0) {
+                          alert('set');
+                        }
+                        else {
+                          var rand = Math.floor((Math.random() * 99999999) + 10000000);
+                          document.cookie = "uid="+rand+"; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+                          
+                        }
+                    </script>
                 </ul>
                 <hr>
                 <small style="font-size:11px !important">Advertisement</small>
