@@ -467,43 +467,23 @@ function toggleRoundFood(args) {
 
 // TODO: Break out many of these GameControls into separate classes.
 
-chat.registerCommand('ping', 'Check your latency.', function () {
-    checkLatency();
+chat.registerCommand('help', 'Information about the chat commands.', function () {
+    chat.printHelp();
 });
 
 chat.registerCommand('dark', 'Toggle dark mode.', function () {
     toggleDarkMode();
 });
 
-chat.registerCommand('border', 'Toggle visibility of border.', function () {
-    toggleBorder();
-});
-
-chat.registerCommand('mass', 'Toggle visibility of mass.', function () {
-    toggleMass();
-});
-
-chat.registerCommand('continuity', 'Toggle continuity.', function () {
-    toggleContinuity();
-});
-
-chat.registerCommand('roundfood', 'Toggle food drawing.', function (args) {
-    toggleRoundFood(args);
-});
-
-chat.registerCommand('help', 'Information about the chat commands.', function () {
-    chat.printHelp();
-});
-
 chat.registerCommand('login', 'Login as an admin.', function (args) {
     socket.emit('pass', args);
 });
 
-chat.registerCommand('kick', 'Kick a player, for admins only.', function (args) {
+chat.registerCommand('kick', '[ADMIN] Kick a player, for admins only.', function (args) {
     socket.emit('kick', args);
 });
 
-chat.registerCommand('addmass', 'Add mass, for admins only.', function (args) {
+chat.registerCommand('addmass', '[ADMIN] - Add mass, for admins only.', function (args) {
     socket.emit('addmass', args);
 });
 
