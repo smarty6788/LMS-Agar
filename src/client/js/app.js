@@ -492,9 +492,9 @@ chat.registerCommand('addmass', '[ADMIN] - Add mass, for admins only.', function
 function setupSocket(socket) {
     // Handle ping.
     socket.on('pong', function () {
-        var latency = Date.now() - startPingTime;
-        debug('Latency: ' + latency + 'ms');
-        chat.addSystemLine('Ping: ' + latency + 'ms');
+        //var latency = Date.now() - startPingTime;
+        //debug('Latency: ' + latency + 'ms');
+        //chat.addSystemLine('Ping: ' + latency + 'ms');
     });
 
     // Handle error.
