@@ -28,5 +28,5 @@
     "virusUniformDisposition": false,
     "newPlayerInitialPosition": "farthest",
     "massLossRate": 1,
-    "mergeTimer": 10
+    "mergeTimer": 30
 }
