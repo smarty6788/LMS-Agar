@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu);
 * {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 14px;
@@ -55,7 +54,6 @@ div {
     right: 10px;
     font-weight: bold;
     text-align: center;
-    font-family:'Ubuntu','Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
 #status .title {
