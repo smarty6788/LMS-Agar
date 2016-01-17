@@ -561,7 +561,7 @@ function setupSocket(socket) {
                     status += (i + 1) + '. An unnamed cell';
             }
         }
-        status += '<br/><br/>Players: ' + data.players;
+        status += '<hr/><br/>Players: ' + data.players;
         document.getElementById('status').innerHTML = status;
     });
 
