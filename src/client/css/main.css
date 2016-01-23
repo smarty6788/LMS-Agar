@@ -132,6 +132,7 @@ div {
     margin: auto;
     width: 350px;
     padding: 20px;
+    padding-bottom:15px;
     border-radius: 10px;
     background-color: white;
     box-sizing: border-box;
