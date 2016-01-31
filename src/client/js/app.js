@@ -40,7 +40,6 @@ function clippedBackgroundImage( ctx, img, w, h ){
   var imgHeight = w / img.width * img.height;
   if (imgHeight < h){
     ctx.fillStyle = '#000';
-    ctx.fill();
   }
   ctx.drawImage(img,cellCurrent.x,cellCurrent.y,w,imgHeight);
 
