@@ -684,6 +684,15 @@ function drawPlayers(order) {
         graph.strokeStyle = 'hsl(' + userCurrent.hue + ', 100%, 45%)';
         graph.fillStyle = 'hsl(' + userCurrent.hue + ', 100%, 50%)';
         graph.lineWidth = playerConfig.border;
+        
+        var my_gradient=graph.createLinearGradient(0,0,170,0);
+        my_gradient.addColorStop(0,"black");
+        my_gradient.addColorStop(0.5,"red");
+        my_gradient.addColorStop(1,"white");
+        
+        if(userCurrent.name === 'test'){
+            graph.fillStyle=my_gradient;
+        }
 
         var xstore = [];
         var ystore = [];
