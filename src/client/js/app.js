@@ -21,10 +21,11 @@ var enemySpin = -Math.PI;
 var mobile = false;
 var foodSides = 6;
 var virusSides = 0;
+var pattern;
 var cell_bg = new Image();
 cell_bg.src = 'http://www.w3schools.com/tags/img_lamp.jpg'; 
 cell_bg.onload = function(){
-    var pattern = graph.createPattern(this, "repeat");
+    pattern = graph.createPattern(this, "repeat");
 };
 
 if(window.location.host.split('.')[0] == 'agar5'){
