@@ -21,6 +21,11 @@ var enemySpin = -Math.PI;
 var mobile = false;
 var foodSides = 6;
 var virusSides = 0;
+var cell_bg = new Image();
+cell_bg.src = 'http://www.w3schools.com/tags/img_lamp.jpg'; 
+cell_bg.onload = function(){
+    var pattern = graph.createPattern(this, "repeat");
+};
 
 if(window.location.host.split('.')[0] == 'agar5'){
     document.getElementById("gamemode").selectedIndex = 0;
@@ -736,12 +741,7 @@ function drawPlayers(order) {
             nameCell = userCurrent.name;
         
         if(nameCell === 'test'){
-            var cell_bg = new Image();
-            cell_bg.src = 'http://www.w3schools.com/tags/img_lamp.jpg'; 
-            cell_bg.onload = function(){
-                var pattern = graph.createPattern(this, "repeat");
-                graph.fillStyle = pattern;
-            };
+            graph.fillStyle = pattern;
         }
         
         graph.lineJoin = 'round';
