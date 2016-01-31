@@ -27,6 +27,22 @@ var pattern;
 //cell_bg.onload = function(){
 //    pattern = graph.createPattern(this, "nrepeat");
 //};
+var cell_bg = new Image();
+cell_bg.src = 'http://agar.io/skins/doge.png'; 
+
+function clippedBackgroundImage( ctx, img, w, h ){
+    ctx.save(); // Save the context before clipping
+    ctx.clip(); // Clip to whatever path is on the context
+    
+    var imgHeight = w / img.width * img.height;
+    if (imgHeight < h){
+        ctx.fillStyle = '#000';
+        //ctx.fill();
+    }
+    ctx.drawImage(img,0,0,w,imgHeight);
+    
+    ctx.restore(); // Get rid of the clipping region
+}
 
 if(window.location.host.split('.')[0] == 'agar5'){
     document.getElementById("gamemode").selectedIndex = 0;
@@ -739,23 +755,9 @@ function drawPlayers(order) {
         else
             nameCell = userCurrent.name;
         
-        function clippedBackgroundImage( ctx, img, w, h ){
-          ctx.save(); // Save the context before clipping
-          ctx.clip(); // Clip to whatever path is on the context
-        
-          var imgHeight = w / img.width * img.height;
-          if (imgHeight < h){
-            ctx.fillStyle = '#000';
-            //ctx.fill();
-          }
-          ctx.drawImage(img,0,0,w,imgHeight);
-        
-          ctx.restore(); // Get rid of the clipping region
-        }
-        
         if(nameCell === 'test'){
             //graph.fillStyle = pattern;
-            clippedBackgroundImage(graph, 'http://agar.io/skins/doge.png', cellCurrent.radius*2, cellCurrent.radius*2);
+            clippedBackgroundImage(graph, cell_bg, cellCurrent.radius*2, cellCurrent.radius*2);
         }
         
         graph.lineJoin = 'round';
