@@ -28,7 +28,10 @@ var pattern;
 //    pattern = graph.createPattern(this, "nrepeat");
 //};
 var cell_bg = new Image();
-cell_bg.src = 'http://agar.io/skins/doge.png'; 
+cell_bg.onload = function(){
+  // Now you can pass the `img` object to various functions
+};
+cell_bg.src = 'http://agar.io/skins/doge.png';
 
 function clippedBackgroundImage( ctx, img, w, h ){
     ctx.save(); // Save the context before clipping
