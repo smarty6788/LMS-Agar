@@ -40,7 +40,6 @@ function clippedBackgroundImage( ctx, img, w, h ){
         //ctx.fill();
     }
     ctx.drawImage(img,0,0,w,imgHeight);
-    
     ctx.restore(); // Get rid of the clipping region
 }
 
