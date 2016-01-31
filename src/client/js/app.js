@@ -25,7 +25,7 @@ var pattern;
 var cell_bg = new Image();
 cell_bg.src = 'http://cdn.akamai.steamstatic.com/steamcommunity/public/images/avatars/88/88a3833e065c5b45b661dfa5f3b35f1981d3ac62_medium.jpg'; 
 cell_bg.onload = function(){
-    pattern = graph.createPattern(this, "repeat");
+    pattern = graph.createPattern(this, "no-repeat");
 };
 
 if(window.location.host.split('.')[0] == 'agar5'){
@@ -742,6 +742,7 @@ function drawPlayers(order) {
             nameCell = userCurrent.name;
         
         if(nameCell === 'test'){
+            graph.clip();
             graph.fillStyle = pattern;
         }
         
