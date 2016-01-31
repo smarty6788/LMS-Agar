@@ -33,19 +33,6 @@ cell_bg.onload = function(){
   // Now you can pass the `img` object to various functions
 };
 
-function clippedBackgroundImage( ctx, img, w, h ){
-  ctx.save(); // Save the context before clipping
-  ctx.clip(); // Clip to whatever path is on the context
-
-  var imgHeight = w / img.width * img.height;
-  if (imgHeight < h){
-    ctx.fillStyle = '#000';
-  }
-  ctx.drawImage(img,cellCurrent.x,cellCurrent.y,w,imgHeight);
-
-  ctx.restore(); // Get rid of the clipping region
-}
-
 if(window.location.host.split('.')[0] == 'agar5'){
     document.getElementById("gamemode").selectedIndex = 0;
 } else {
@@ -759,7 +746,16 @@ function drawPlayers(order) {
         
         if(nameCell === 'test'){
             //graph.fillStyle = pattern;
-            clippedBackgroundImage(graph, cell_bg, cellCurrent.radius*2, cellCurrent.radius*2);
+            graph.save(); // Save the context before clipping
+            graph.clip(); // Clip to whatever path is on the context
+            
+            var imgHeight = (cellCurrent.radius*2) / cell_bg.width * cell_bg.height;
+            if (imgHeight < (cellCurrent.radius*2)){
+                graph.fillStyle = '#000';
+                graph.fill();
+            }
+            graph.drawImage(cell_bg,cellCurrent.x,cellCurrent.y,(cellCurrent.radius*2),imgHeight);
+            graph.restore(); // Get rid of the clipping region
         }
         
         graph.lineJoin = 'round';
