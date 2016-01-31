@@ -287,8 +287,19 @@ io.on('connection', function (socket) {
                 player.hue = 0;
             } else if(player.name.toLowerCase() === "orange"){
                 player.hue = 25;
+            } else if(player.name.toLowerCase() === "yellow"){
+                player.hue = 50;
+            } else if(player.name.toLowerCase() === "green"){
+                player.hue = 125;
+            } else if(player.name.toLowerCase() === "lightblue"||player.name.toLowerCase() === "light blue"){
+                player.hue = 175;
+            } else if(player.name.toLowerCase() === "blue"||player.name.toLowerCase() === "dark blue"||player.name.toLowerCase() === "darkblue"){
+                player.hue = 250;
+            } else if(player.name.toLowerCase() === "purple"){
+                player.hue = 285;
+            } else if(player.name.toLowerCase() === "pink"){
+                player.hue = 310;
             }
-            player.hue = player.name;
             currentPlayer = player;
             currentPlayer.lastHeartbeat = new Date().getTime();
             users.push(currentPlayer);
