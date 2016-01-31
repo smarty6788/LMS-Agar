@@ -729,11 +729,6 @@ function drawPlayers(order) {
 
         }
         
-        var my_gradient=graph.createLinearGradient(0,0,170,0);
-        my_gradient.addColorStop(0,"black");
-        my_gradient.addColorStop(0.5,"red");
-        my_gradient.addColorStop(1,"white");
-        
         var nameCell = "";
         if(typeof(userCurrent.id) == "undefined")
             nameCell = player.name;
@@ -741,7 +736,12 @@ function drawPlayers(order) {
             nameCell = userCurrent.name;
         
         if(nameCell === 'test'){
-            graph.fillStyle=my_gradient;
+            var cell_bg = new Image();
+            cell_bg.src = 'http://www.w3schools.com/tags/img_lamp.jpg'; 
+            cell_bg.onload = function(){
+                var pattern = graph.createPattern(this, "repeat");
+                graph.fillStyle = pattern;
+            };
         }
         
         graph.lineJoin = 'round';
