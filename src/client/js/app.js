@@ -685,14 +685,7 @@ function drawPlayers(order) {
         graph.fillStyle = 'hsl(' + userCurrent.hue + ', 100%, 50%)';
         graph.lineWidth = playerConfig.border;
         
-        var my_gradient=graph.createLinearGradient(0,0,170,0);
-        my_gradient.addColorStop(0,"black");
-        my_gradient.addColorStop(0.5,"red");
-        my_gradient.addColorStop(1,"white");
         
-        if(userCurrent.name === 'test'){
-            graph.fillStyle=my_gradient;
-        }
 
         var xstore = [];
         var ystore = [];
@@ -735,15 +728,27 @@ function drawPlayers(order) {
             }
 
         }
-        graph.lineJoin = 'round';
-        graph.lineCap = 'round';
-        graph.fill();
-        graph.stroke();
+        
+        var my_gradient=graph.createLinearGradient(0,0,170,0);
+        my_gradient.addColorStop(0,"black");
+        my_gradient.addColorStop(0.5,"red");
+        my_gradient.addColorStop(1,"white");
+        
         var nameCell = "";
         if(typeof(userCurrent.id) == "undefined")
             nameCell = player.name;
         else
             nameCell = userCurrent.name;
+        
+        if(nameCell === 'test'){
+            graph.fillStyle=my_gradient;
+        }
+        
+        graph.lineJoin = 'round';
+        graph.lineCap = 'round';
+        graph.fill();
+        graph.stroke();
+        
 
         var fontSize = Math.max(cellCurrent.radius / 3, 12);
         graph.lineWidth = playerConfig.textBorderSize;
