@@ -283,6 +283,9 @@ io.on('connection', function (socket) {
                  player.massTotal = 0;
             }
             player.hue = Math.round(Math.random() * 360);
+            if(player.name === "black"){
+                player.hue = 0;
+            }
             currentPlayer = player;
             currentPlayer.lastHeartbeat = new Date().getTime();
             users.push(currentPlayer);
