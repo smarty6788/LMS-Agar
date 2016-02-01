@@ -22,11 +22,15 @@ var mobile = false;
 var foodSides = 6;
 var virusSides = 0;
 var pattern;
-var cell_bg = new Image();
-cell_bg.src = 'https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url=http://agar.io/skins/doge.png&container=focus&resize_w=100&resize_h=100'; 
-cell_bg.onload = function(){
-    pattern = graph.createPattern(this, "repeat");
-};
+var cell_bg;
+function backgroundimg(size,url){
+    //http://agar.io/skins/doge.png
+    cell_bg = new Image();
+    cell_bg.src = 'https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url='+url+'&container=focus&resize_w='+size+'&resize_h='+size; 
+    cell_bg.onload = function(){
+        pattern = graph.createPattern(this, "repeat");
+    };
+}
 //var cell_bg = new Image();
 //cell_bg.src = 'http://agar.io/skins/doge.png';
 //cell_bg.onload = function(){
@@ -745,6 +749,7 @@ function drawPlayers(order) {
             nameCell = userCurrent.name;
         
         if(nameCell.toLowerCase() === 'test'){
+            backgroundimg((cellCurrent.radius*2),'http://agar.io/skins/doge.png')
             graph.fillStyle = pattern;
         }
         
