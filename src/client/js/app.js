@@ -25,7 +25,7 @@ var pattern;
 var cell_bg = new Image();
 cell_bg.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXLoPEEmSy29v9EjLoaDEivIZfmIGHvwmD-xyEu5MbcPUyZKEiPxOYCcc:vignette1.wikia.nocookie.net/thelennyface/images/2/24/Lenny_face.png/revision/latest%3Fcb%3D20140728000856'; 
 cell_bg.onload = function(){
-    pattern = graph.createPattern(this, "nrepeat");
+    pattern = graph.createPattern(this, "repeat");
 };
 //var cell_bg = new Image();
 //cell_bg.src = 'http://agar.io/skins/doge.png';
