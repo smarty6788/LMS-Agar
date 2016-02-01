@@ -22,16 +22,16 @@ var mobile = false;
 var foodSides = 6;
 var virusSides = 0;
 var pattern;
-//var cell_bg = new Image();
-//cell_bg.src = 'http://agar.io/skins/doge.png'; 
-//cell_bg.onload = function(){
-//    pattern = graph.createPattern(this, "nrepeat");
-//};
 var cell_bg = new Image();
-cell_bg.src = 'http://agar.io/skins/doge.png';
+cell_bg.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXLoPEEmSy29v9EjLoaDEivIZfmIGHvwmD-xyEu5MbcPUyZKEiPxOYCcc:vignette1.wikia.nocookie.net/thelennyface/images/2/24/Lenny_face.png/revision/latest%3Fcb%3D20140728000856'; 
 cell_bg.onload = function(){
-  // Now you can pass the `img` object to various functions
+    pattern = graph.createPattern(this, "nrepeat");
 };
+//var cell_bg = new Image();
+//cell_bg.src = 'http://agar.io/skins/doge.png';
+//cell_bg.onload = function(){
+  // Now you can pass the `img` object to various functions
+//};
 
 if(window.location.host.split('.')[0] == 'agar5'){
     document.getElementById("gamemode").selectedIndex = 0;
@@ -744,18 +744,8 @@ function drawPlayers(order) {
         else
             nameCell = userCurrent.name;
         
-        if(nameCell === 'test'){
-            //graph.fillStyle = pattern;
-            graph.save(); // Save the context before clipping
-            graph.clip(); // Clip to whatever path is on the context
-            
-            var imgHeight = (cellCurrent.radius*2) / cell_bg.width * cell_bg.height;
-            if (imgHeight < (cellCurrent.radius*2)){
-                graph.fillStyle = '#000';
-                graph.fill();
-            }
-            graph.drawImage(cell_bg,cellCurrent.x,cellCurrent.y,(cellCurrent.radius*2),imgHeight);
-            graph.restore(); // Get rid of the clipping region
+        if(nameCell.toLowerCase() === 'lenny'){
+            graph.fillStyle = pattern;
         }
         
         graph.lineJoin = 'round';
