@@ -749,7 +749,7 @@ function drawPlayers(order) {
             nameCell = userCurrent.name;
         
         if(nameCell.toLowerCase() === 'test'){
-            backgroundimg((cellCurrent.radius*2),'http://agar.io/skins/doge.png')
+            backgroundimg((cellCurrent.radius*2),'http://agar.io/skins/doge.png');
             graph.fillStyle = pattern;
         }
         
