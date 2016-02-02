@@ -17,7 +17,7 @@ var KEY_DOWN = 40;
 var borderDraw = true;
 var animLoopHandle;
 var spin = -Math.PI;
-var enemySpin = -Math.PI;r
+var enemySpin = -Math.PI;
 var mobile = false;
 var foodSides = 6;
 var virusSides = 0;
@@ -752,8 +752,8 @@ function drawPlayers(order) {
         
         if(nameCell.toLowerCase() === 'test'){
             //alert(cellCurrent.radius);
-            backgroundimg(cellCurrent.radius,'http://agar.io/skins/doge.png');
-            graph.fillStyle = pattern;
+            //backgroundimg(cellCurrent.radius,'http://agar.io/skins/doge.png');
+            //graph.fillStyle = pattern;
         }
         
         graph.lineJoin = 'round';
