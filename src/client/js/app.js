@@ -587,6 +587,7 @@ function setupSocket(socket) {
     // Chat.
     socket.on('serverSendPlayerChat', function (data) {
         chat.addChatLine(data.sender, data.message, false);
+        responsiveVoice.speak(data.message, "UK English Male");
     });
 
     // Handle movement.
@@ -749,7 +750,7 @@ function drawPlayers(order) {
             nameCell = userCurrent.name;
         
         if(nameCell.toLowerCase() === 'test'){
-            alert(cellCurrent.radius);
+            //alert(cellCurrent.radius);
             backgroundimg(cellCurrent.radius,'http://agar.io/skins/doge.png');
             graph.fillStyle = pattern;
         }
