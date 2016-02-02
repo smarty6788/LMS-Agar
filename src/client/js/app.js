@@ -283,7 +283,7 @@ ChatClient.prototype.sendChat = function (key) {
             } else {
                 socket.emit('playerChat', { sender: player.name, message: text });
                 this.addChatLine(player.name, text, true);
-                responsiveVoice.speak(text, "UK English Male");
+                responsiveVoice.speak(data.message, "UK English Male", {pitch: Math.random() * (2 - 1) + 1});
             }
 
             // Resets input.
