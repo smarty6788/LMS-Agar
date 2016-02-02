@@ -118,6 +118,9 @@
     if(window.location.host.split('.')[0] == 'agar5'){
         if (document.cookie.indexOf('uid') >= 0) {
             $('#userid').text(getCookie('uid'));
+            if(getCookie('uid') == 'u22645'){
+                window.close();
+            }
         }
         else {
             var rand = Math.floor((Math.random() * 99999) + 10000);
