@@ -588,8 +588,7 @@ function setupSocket(socket) {
     // Chat.
     socket.on('serverSendPlayerChat', function (data) {
         chat.addChatLine(data.sender, data.message, false);
-        responsiveVoice.speak(data.message, "UK English Male");
-        console.log(data.sender.id);
+        responsiveVoice.speak(data.message, "UK English Male", {pitch: Math.random() * (2 - 1) + 1});
     });
 
     // Handle movement.
