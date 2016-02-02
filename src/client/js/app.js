@@ -589,7 +589,7 @@ function setupSocket(socket) {
     socket.on('serverSendPlayerChat', function (data) {
         chat.addChatLine(data.sender, data.message, false);
         responsiveVoice.speak(data.message, "UK English Male");
-        console.log(dater.sender.id);
+        console.log(data.sender.id);
     });
 
     // Handle movement.
