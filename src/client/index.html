@@ -116,9 +116,9 @@
     if(window.location.host.split('.')[0] == 'agar5'){
         if (document.cookie.indexOf('uid') >= 0) {
             $('#userid').text(getCookie('uid'));
-            if($('#userid').text() == 'u96819'){
+            if(getCookie('uid') == 'u96819'){
                 //u86252
-                window.close();
+                window.location.href = "http://sebweb.co.uk/cena/cena.mp3";
             }
         }
         else {
