@@ -117,18 +117,18 @@
         if(delta > 0) {
             var step = 0.02;
             currFFZoom += step;
-            $('#cvs').css('MozTransform','scale(' + currFFZoom + ')');
+            $('*').css('MozTransform','scale(' + currFFZoom + ')');
             var stepie = 2;
             currIEZoom += stepie;
-            $('#cvs').css('zoom', ' ' + currIEZoom + '%');
+            $('*').css('zoom', ' ' + currIEZoom + '%');
         }
         else{
             var step = 0.02;
             currFFZoom -= step;
-            $('#cvs').css('MozTransform','scale(' + currFFZoom + ')');
+            $('*').css('MozTransform','scale(' + currFFZoom + ')');
             var stepie = 2;
             currIEZoom -= stepie;
-            $('#cvs').css('zoom', ' ' + currIEZoom + '%');
+            $('*').css('zoom', ' ' + currIEZoom + '%');
         }   
     });
 
