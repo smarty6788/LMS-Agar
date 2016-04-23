@@ -115,20 +115,20 @@
         var delta = evt.detail ? evt.detail*(-40) : evt.wheelDelta //check for detail first, because it is used by Opera and FF
     
         if(delta > 0) {
-            var step = 0.01;
+            var step = 0.002;
             currFFZoom += step;
-            $('*').css('MozTransform','scale(' + currFFZoom + ')');
+            $('#cvs').css('MozTransform','scale(' + currFFZoom + ')');
             var stepie = 2;
             currIEZoom += stepie;
-            $('*').css('zoom', ' ' + currIEZoom + '%');
+            $('#cvs').css('zoom', ' ' + currIEZoom + '%');
         }
         else{
-            var step = 0.01;
+            var step = 0.002;
             currFFZoom -= step;
-            $('*').css('MozTransform','scale(' + currFFZoom + ')');
+            $('#cvs').css('MozTransform','scale(' + currFFZoom + ')');
             var stepie = 2;
             currIEZoom -= stepie;
-            $('*').css('zoom', ' ' + currIEZoom + '%');
+            $('#cvs').css('zoom', ' ' + currIEZoom + '%');
         }   
     });
 
