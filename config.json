@@ -16,7 +16,7 @@
 	},
     "gameWidth": 3000,
     "gameHeight": 3000,
-    "adminPass": "stopstealingcode:(",
+    "adminPass": "adminPass",
     "gameMass": 25000,
     "maxFood": 325,
     "maxVirus": 0,
