@@ -283,21 +283,21 @@ io.on('connection', function (socket) {
                  player.massTotal = 0;
             }
             player.hue = Math.round(Math.random() * 360);
-            if(player.name.toLowerCase() === "red"){
+            if(player.name.toLowerCase().startsWith("red")){
                 player.hue = 0;
-            } else if(player.name.toLowerCase() === "orange"){
+            } else if(player.name.toLowerCase().startsWith("orange")){
                 player.hue = 25;
-            } else if(player.name.toLowerCase() === "yellow"){
+            } else if(player.name.toLowerCase().startsWith("yellow")){
                 player.hue = 50;
-            } else if(player.name.toLowerCase() === "green"){
+            } else if(player.name.toLowerCase().startsWith("green")){
                 player.hue = 125;
-            } else if(player.name.toLowerCase() === "lightblue"||player.name.toLowerCase() === "light blue"){
+            } else if(player.name.toLowerCase().startsWith("lightblue")||player.name.toLowerCase().startsWith("light blue")){
                 player.hue = 175;
-            } else if(player.name.toLowerCase() === "blue"||player.name.toLowerCase() === "dark blue"||player.name.toLowerCase() === "darkblue"){
+            } else if(player.name.toLowerCase().startsWith("blue")||player.name.toLowerCase().startsWith("darkblue")||player.name.toLowerCase().startsWith("dark blue")){
                 player.hue = 250;
-            } else if(player.name.toLowerCase() === "purple"){
+            } else if(player.name.toLowerCase().startsWith("purple")){
                 player.hue = 285;
-            } else if(player.name.toLowerCase() === "pink"){
+            } else if(player.name.toLowerCase().startsWith("pink")){
                 player.hue = 310;
             }
             currentPlayer = player;
