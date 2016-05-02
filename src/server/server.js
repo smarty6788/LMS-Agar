@@ -366,7 +366,7 @@ io.on('connection', function (socket) {
             var reason = '';
             var worked = false;
             for (var e = 0; e < users.length; e++) {
-                if (users[e].name === data[0] && !users[e].admin && !worked) {
+                if (users[e].name.startsWith(data[0]) && !users[e].admin && !worked) {
                     if (data.length > 1) {
                         for (var f = 1; f < data.length; f++) {
                             if (f === data.length) {
