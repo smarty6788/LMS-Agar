@@ -55,6 +55,9 @@ if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
 
 function startGame(type) {
     playerName = playerNameInput.value.replace(/(<([^>]+)>)/ig, '').substring(0,25);
+    if(window.location.host.split('.')[0] == 'agar5'){
+        playerName = playerName + '('+$('#userid').text()+')';
+    }
     playerType = type;
 
     screenWidth = window.innerWidth;
