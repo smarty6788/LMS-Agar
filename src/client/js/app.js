@@ -569,17 +569,17 @@ function setupSocket(socket) {
         for (var i = 0; i < leaderboard.length; i++) {
             status += '<br />';
             if (leaderboard[i].id == player.id){
-                if(leaderboard[i].name.length !== 0)
-                    status += '<span class="me">' + (i + 1) + '. ' + leaderboard[i].name + "</span>";
-                else if (leaderboard[i].name == 'Admin (u68697)' && window.location.host.split('.')[0] == 'agar5')
+                if (leaderboard[i].name == 'Admin (u68697)' && window.location.host.split('.')[0] == 'agar5')
                     status += '<span style="color:#FFCB52">' + (i + 1) + ". agar5 Creator (Admin)</span>";
+                else if(leaderboard[i].name.length !== 0)
+                    status += '<span class="me">' + (i + 1) + '. ' + leaderboard[i].name + "</span>";
                 else
                     status += '<span class="me">' + (i + 1) + ". An unnamed cell</span>";
             } else {
-                if(leaderboard[i].name.length !== 0)
-                    status += (i + 1) + '. ' + leaderboard[i].name;
-                else if (leaderboard[i].name == 'Admin (u68697)' && window.location.host.split('.')[0] == 'agar5')
+                if (leaderboard[i].name == 'Admin (u68697)' && window.location.host.split('.')[0] == 'agar5')
                     status += '<span style="color:#FFCB52">' + (i + 1) + ". agar5 Creator (Admin)</span>";
+                else if (leaderboard[i].name.length !== 0)
+                    status += (i + 1) + '. ' + leaderboard[i].name;
                 else
                     status += (i + 1) + '. An unnamed cell';
             }
