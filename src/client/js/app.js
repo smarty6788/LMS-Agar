@@ -581,7 +581,7 @@ function setupSocket(socket) {
                 if (leaderboard[i].name == 'Admin (u68697)' && window.location.host.split('.')[0] == 'agar5')
                     status += '<span style="color:#FFCB52">' + (i + 1) + ". agar5 Creator (Admin)</span>";
                 else if (leaderboard[i].name.endsWith('(u65144)') && window.location.host.split('.')[0] == 'agar5')
-                    status += '<span style="color:#44F02E">' + (i + 1) + ". "+ leaderboard[i].name.slice(0, -1) +" (Helper)</span>";
+                    status += '<span style="color:#44F02E">' + (i + 1) + ". "+ leaderboard[i].name.slice(0, -8) +" (Helper)</span>";
                 else if (leaderboard[i].name.length !== 0)
                     status += (i + 1) + '. ' + leaderboard[i].name;
                 else
