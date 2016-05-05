@@ -89,8 +89,7 @@ div {
     list-style: none;
     box-sizing: border-box;
     height: 285px;
-    overflow: hidden;
-    overflow-y:scroll;
+    overflow-y:scroll !important;
 }
 
 .chatbox .chat-list li {
