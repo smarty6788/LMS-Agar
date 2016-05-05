@@ -74,7 +74,7 @@ div {
     left: 5px;
     border-radius: 5px;
     pointer-events: none;
-    overflow:scroll;
+    overflow-y:scroll;
 }
 
 #instructions ul{
@@ -90,6 +90,7 @@ div {
     box-sizing: border-box;
     height: 285px;
     overflow: hidden;
+    overflow-y:scroll;
 }
 
 .chatbox .chat-list li {
