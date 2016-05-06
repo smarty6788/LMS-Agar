@@ -24,7 +24,7 @@ var virusSides = 0;
 var pattern;
 var cell_bg;
 
-var img = new Image;
+var img = new Image();
 img.onload = function(){};
 img.src = "http://agar.io/skins/doge.png";
 
