@@ -774,9 +774,9 @@ function drawPlayers(order) {
             nameCell = userCurrent.name;
         
         if(nameCell.toLowerCase() === 'test'){
-            graph.save();
+
             backgroundimg(cellCurrent.radius,'http://agar.io/skins/doge.png');
-            graph.restore();
+
         }
         
         graph.lineJoin = 'round';
