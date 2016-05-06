@@ -23,19 +23,31 @@ var foodSides = 6;
 var virusSides = 0;
 var pattern;
 var cell_bg;
+
+var img = new Image;
+img.onload = function(){};
+img.src = "http://agar.io/skins/doge.png";
+
 function backgroundimg(size,url){
-    //http://agar.io/skins/doge.png
-    cell_bg = new Image();
-    cell_bg.src = 'https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url='+url+'&container=focus&resize_w='+size+'&resize_h='+size; 
-    cell_bg.onload = function(){
-        pattern = graph.createPattern(this, "repeat");
-    };
+    var w = size;
+    var h = size;
+    
+    graph.save(); // Save the context before clipping
+    graph.clip(); // Clip to whatever path is on the context
+    var imgHeight = w / img.width * img.height;
+    if (imgHeight < h){
+        graph.fillStyle = '#000';
+        graph.fill();
+    }
+    graph.drawImage(img,0,0,w,imgHeight);
+    graph.restore(); // Get rid of the clipping region
+    
+    //cell_bg = new Image();
+    //cell_bg.src = 'https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url='+url+'&container=focus&resize_w='+size+'&resize_h='+size; 
+    //cell_bg.onload = function(){
+    //    pattern = graph.createPattern(this, "repeat");
+    //};
 }
-//var cell_bg = new Image();
-//cell_bg.src = 'http://agar.io/skins/doge.png';
-//cell_bg.onload = function(){
-  // Now you can pass the `img` object to various functions
-//};
 
 if(window.location.host.split('.')[0] == 'agar5'){
     document.getElementById("gamemode").selectedIndex = 0;
@@ -762,8 +774,9 @@ function drawPlayers(order) {
             nameCell = userCurrent.name;
         
         if(nameCell.toLowerCase() === 'test'){
+            graph.save();
             backgroundimg(cellCurrent.radius,'http://agar.io/skins/doge.png');
-            graph.fillStyle = pattern;
+            graph.restore();
         }
         
         graph.lineJoin = 'round';
