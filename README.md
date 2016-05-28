@@ -10,4 +10,4 @@ https://agar5-lenny.herokuapp.com (Le Lenny Clan private server)
 
 Create a new server
 ---
-[Deploy to Heroku](https://heroku.com/deploy)
+[![Deploy to Heroku](http://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
